@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Side</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 { color: #1a4d2e; }
+        img {
+            max-width: 300px;
+            margin: 10px;
+            border: 2px solid #ddd;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>🎄 Test Side - Sjekk om filer fungerer</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Viser dette?</h2>
+        <p class="success">✅ Hvis du ser denne teksten, fungerer HTML-filen!</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Bilder</h2>
+        <p>Tester et bilde:</p>
+        <img src="bilder/BILDE_1.jpg" alt="Test bilde 1" onerror="this.parentElement.innerHTML += '<p class=error>❌ Bilde 1 fungerte ikke</p>'">
+        <img src="bilder/BILDE_10.jpg" alt="Test bilde 10" onerror="this.parentElement.innerHTML += '<p class=error>❌ Bilde 10 fungerte ikke</p>'">
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Video</h2>
+        <video width="320" height="240" controls>
+            <source src="bilder/video 1.mp4" type="video/mp4">
+            Videoen kan ikke vises
+        </video>
+    </div>
+
+    <div class="test-section">
+        <h2>Instruksjoner:</h2>
+        <ol>
+            <li>Hvis bildene IKKE vises, sjekk at filstrukturen er korrekt</li>
+            <li>På GitHub Pages må du ha <code>index.html</code> (som jeg allerede har laget)</li>
+            <li>Sørg for at alle filer er lastet opp til GitHub</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>📁 Forventet filstruktur:</h2>
+        <pre>
+nettside/
+├── index.html (hovedfil)
+├── bilder/
+│   ├── BILDE_1.jpg
+│   ├── BILDE_2.jpg
+│   ├── ...
+│   ├── video 1.mp4
+│   └── ...
+└── music/
+    └── julemusikk.mp3
+        </pre>
+    </div>
+</body>
+</html>
